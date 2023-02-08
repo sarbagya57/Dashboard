@@ -6,81 +6,161 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css" type="text/css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+
 
     <title>Dashboard</title>
     <link rel="icon" type="image/x-icon" href="/assets/logo.png">
+
+
 </head>
 <body>
 
     <!-- sidebar -->
     <aside>
-        <div class="sidebar">
-           <div class="sidebar__header">
-                <img src="/assets/logo.png" alt="Stratis Logo" width="32" height="32"> 
-           </div>
-           <div class="sidebar-menu">
-            <div class="menu-header">
-                <span> HEADING </span>
-            </div>
-            <div class="menu-items">
-               <ul>
-                <li> 
-                    <img src="/assets/home-icon.png" alt="Stratis Logo" width="14" height="16"> 
-                    <span>Home</span>
-                </li>
-                <li> 
-                    <img src="/assets/dashboard-icon.png" alt="Stratis Logo" width="14" height="16"> 
-                    <span>Dashboard</span>
-                </li>
-                <li> 
-                    <img src="/assets/user-icon.png" alt="Stratis Logo" width="14" height="16"> 
-                    <span>Users</span>
-                </li>
-                <li> 
-                    <img src="/assets/project-icon.png" alt="Stratis Logo" width="14" height="16"> 
-                    <span>Projects</span>
-                </li>
-                <li> 
-                    <img src="/assets/data-icon.png" alt="Stratis Logo" width="14" height="16"> 
-                    <span>Data</span>
-                </li>
-               </ul>               
-            </div>
-            </div>
-           <div class="sidebar-footer">
-            <div class="footer-head">
-                <span>PROJECTS</span>
-            </div>
-            <div class="footer-items">
-                <ul>
-                    <li> 
-                        <img src="/assets/dashboard-icon.png" alt="Stratis Logo" width="14" height="16"> 
-                        <span>Settings</span>
+        <ul class="sidebar-items">
+            <li class="logo">
+                <img src="/assets/logo.png" alt="Stratis Logo" > 
+            </li>
+
+            <li class="heading">
+                <span> HEADING </span> 
+            </li>
+
+            <li class="menu-items">
+                <a href="#">
+                    <img src="/assets/home-icon.png" alt="icons"> 
+                    <span class="nav-item">Home</span>
+                </a>
+            </li>
+
+            <li class="menu-items">
+                <a href="#">
+                    <img src="/assets/dashboard-icon.png" alt="icons" >
+                    <span class="nav-item">Dashboard</span>
+                </a>
+            </li>
+
+            <li class="menu-items">
+                <a href="#">
+                    <img src="/assets/user-icon.png" alt="icons">
+                    <span class="nav-item">Users</span>
+                </a>
+            </li>
+
+            <li class="menu-items">
+                <a href="#">
+                    <img src="/assets/project-icon.png" alt="icons">
+                    <span class="nav-item">Projects</span>
+                </a>
+            </li>
+
+            <li class="menu-items">
+                <a href="#">
+                    <img src="/assets/data-icon.png" alt="icons" >
+                    <span class="nav-item">Data</span>
+                </a>
+            </li>
+    
+            <li class="footer-items">
+                <ul class="footer-list">
+
+                    <li class="list-items">
+                        <span class="heading"> PROJECTS </span> 
                     </li>
-                    <li> 
-                        <img src="/assets/help-icon.png" alt="Stratis Logo" width="14" height="16"> 
-                        <span>Help</span>
+
+                    <li class="list-items">
+                        <a href=""> 
+                            <img src="/assets/dashboard-icon.png" alt="icons" class="footer-icon"> 
+                            <span class="nav-item"> Settings </span>
+                        </a>
+                    </li>
+                    <li class="list-items"> 
+                        <a>
+                            <img src="/assets/help-icon.png" alt="icons" class="footer-icon"> 
+                            <span class="nav-item"> Help </span>
+                        </a>
                     </li>
                 </ul>
-            </div>
-            </div>
-        </div>
-    </aside>
+            </li>
+        </ul>
+      </aside>
 
     <!--Header-->
 
     <header>
+        <div class="header-content">
+
+        
         <div class="input-search">
-           <div class="container">
-                <img src="/assets/search-icon.png" alt="Stratis Logo" width="14" height="14">
+           <div class="search">
+                <img src="/assets/search-icon.png" alt="icons">
                 <input type="text" placeholder="Search" >   
            </div>
-           <div class="container icon">
-                <img src="/assets/A.png" alt="A" width="28" height="20">       
+           <div class="button-A">
+                <img src="/assets/A.png" alt="A">       
             </div>
         </div>
 
+        <div class="avatar-info">
+            <div class="avatar">
+                <img src="/assets/avatar.png" alt="icons">
+            </div>
+            <div class="user-info">
+                <span class="user-details"> Amanda Haydenson </span>
+                <span class="user-details"> amandahay@gmail.com </span>
+
+            </div>
+        </div>
+
+    </div>
+
+
     </header>
+
+    <section>
+       <div class="main">
+
+            <div class="main-heading">
+
+                <div class="component-info">
+                    <div class="topic">
+                        <span> Payroll </span>
+                    </div>
+                    
+                    <div class="date">
+                        <span> July 01 - July 31 </span>
+                        <!-- <img src="/assets/info-icon.png" alt="icons"> -->
+                    </div>
+                </div>
+
+                <button class="btn add">
+                    <img src="/assets/add-icon.png" alt="icons">
+                    <span> Add candidate </span>
+                </button>
+            </div>
+
+            <!-- <div class="divider">
+                
+            </div> -->
+
+            <!-- <hr class="solid"> -->
+
+            <div class="summary">
+                <span>
+                    Summary for this month payroll
+                </span>
+                <span>
+                    See the total hours work and annual leave taken for each employee.
+                </span>
+            </div>
+
+        </div>
+
+        
+
+    </section>
     
 
 </body>
