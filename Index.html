@@ -19,51 +19,54 @@
 
     <!-- sidebar -->
     <aside>
-        <ul class="sidebar-items">
-            <li class="logo">
+        <div class="sidebar-items">
+
+            <div class="logo">
                 <img src="/assets/logo.png" alt="Stratis Logo" > 
-            </li>
+            </div>
 
-            <li class="heading">
-                <span> HEADING </span> 
-            </li>
+            <div class="sidebar-menu"> 
+                <div class="heading">
+                    <span> HEADING </span> 
+                </div>
 
-            <li class="menu-items">
-                <a href="#">
-                    <img src="/assets/home-icon.png" alt="icons"> 
-                    <span class="nav-item">Home</span>
-                </a>
-            </li>
+                <div class="menu-items">
+                    <a href="#">
+                        <img src="/assets/home-icon.png" alt="icons"> 
+                        <span class="nav-item">Home</span>
+                    </a>
+                </div>
 
-            <li class="menu-items">
-                <a href="#">
-                    <img src="/assets/dashboard-icon.png" alt="icons" >
-                    <span class="nav-item">Dashboard</span>
-                </a>
-            </li>
+                <div class="menu-items">
+                    <a href="#">
+                        <img src="/assets/dashboard-icon.png" alt="icons" >
+                        <span class="nav-item">Dashboard</span>
+                    </a>
+                </div>
 
-            <li class="menu-items">
-                <a href="#">
-                    <img src="/assets/user-icon.png" alt="icons">
-                    <span class="nav-item">Users</span>
-                </a>
-            </li>
+                <div class="menu-items">
+                    <a href="#">
+                        <img src="/assets/user-icon.png" alt="icons">
+                        <span class="nav-item">Users</span>
+                    </a>
+                </div>
 
-            <li class="menu-items">
-                <a href="#">
-                    <img src="/assets/project-icon.png" alt="icons">
-                    <span class="nav-item">Projects</span>
-                </a>
-            </li>
+                <div class="menu-items">
+                    <a href="#">
+                        <img src="/assets/project-icon.png" alt="icons">
+                        <span class="nav-item">Projects</span>
+                    </a>
+                </div>
 
-            <li class="menu-items">
-                <a href="#">
-                    <img src="/assets/data-icon.png" alt="icons" >
-                    <span class="nav-item">Data</span>
-                </a>
-            </li>
+                <div class="menu-items">
+                    <a href="#">
+                        <img src="/assets/data-icon.png" alt="icons" >
+                        <span class="nav-item">Data</span>
+                    </a>
+                </div>
+            </div>
     
-            <li class="footer-items">
+            <div class="footer-items">
                 <ul class="footer-list">
 
                     <li class="list-items">
@@ -83,8 +86,8 @@
                         </a>
                     </li>
                 </ul>
-            </li>
-        </ul>
+            </div>
+        </div>
       </aside>
 
     <!--Header-->
@@ -135,32 +138,122 @@
                     </div>
                 </div>
 
-                <button class="btn add">
+                <button class="btn-add">
                     <img src="/assets/add-icon.png" alt="icons">
                     <span> Add candidate </span>
                 </button>
             </div>
 
-            <!-- <div class="divider">
-                
-            </div> -->
+            <hr class="solid">
 
-            <!-- <hr class="solid"> -->
-
+           
             <div class="summary">
-                <span>
+                <span class="title">
                     Summary for this month payroll
                 </span>
-                <span>
+                <span class="desc">
                     See the total hours work and annual leave taken for each employee.
                 </span>
             </div>
 
-        </div>
+            <div class="employee-list">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>EMPLOYEE</th>
+                      <th>EMPLOYEE TYPE</th>
+                      <th>PAID DAYS</th>
+                      <th>TIME OFF </th>
+                      <th>NET PAY</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td class="emp-details"> 
+                            <div class="emp-name">
+                                <span> Steve Vaccaro</span>
+                            </div>
+                            <div class="emp-country">
+                                <img src="/assets//country-icon.png" alt="country">
+                            </div>
+                        </td>
+                        <td> Full-time Employee</td>
+                        <td> 22 days</td>
+                        <td> 0 days</td>
+                        <td class="net-pay"> $4345.00</td>
+                    </tr>
+                    <tr>
+                        <td class="emp-details"> 
+                            <div class="emp-name">
+                                <span> Tiana Kenter</span>
+                            </div>
+                            <div class="emp-country">
+                                <img src="/assets//country-icon.png" alt="country">
+                            </div>
+                        </td>
+                        <td> Full-time Employee</td>
+                        <td> 20 days</td>
+                        <td> 2 days</td>
+                        <td class="net-pay"> $3656.00</td>
+                    </tr>
+                    <tr>
+                        <td class="emp-details"> 
+                            <div class="emp-name">
+                                <span> Giana Troff</span>
+                            </div>
+                            <div class="emp-country">
+                                <img src="/assets//country-icon.png" alt="country">
+                            </div>
+                        </td>
+                        <td> Contractor</td>
+                        <td> 20 days</td>
+                        <td> 0 days</td>
+                        <td class="net-pay"> $2125.00</td>
+                    </tr>
+                    <tr>
+                        <td class="emp-details"> 
+                            <div class="emp-name">
+                                <span > Anika Levin</span>
+                            </div>
+                            <div class="emp-country">
+                                <img src="/assets//country-icon.png" alt="country">
+                            </div>
+                        </td>
+                        <td> Contractor</td>
+                        <td> 7 days</td>
+                        <td> 0 days</td>
+                        <td class="net-pay"> $3653.00</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                        <th>Total</th>
+                        <th> </th>
+                        <th>99 Days</th>
+                        <th>9 days</th>
+                        <th class="total-pay"> $16.567.00</th>
+                      </tr>
+                  </tfoot>
+                </table>
+              </div>
+              
 
+            <div class="total">
+                <span class="amount"> $16,567.00 </span>
+                <span> Total payroll </span>
+            </div>
+
+            <div class="submit-payroll">
+                <button>
+                    Run Payroll
+                </button> 
+            </div>
+
+        </div>
         
 
     </section>
+    
     
 
 </body>
