@@ -4,10 +4,9 @@
 }
 
 body{
-  min-width: 100%;
-  min-height: 100vh;
   background: #F5F5F5;
   /* overflow: hidden; */
+  font-family: 'Inter', sans-serif;
 }
 
 /* Sidebar CSS */
@@ -103,7 +102,6 @@ header{
     top: 0;
     padding: 24px;
     background: #F5F5F5;
-    z-index: ;
 }
 
 header .header-content{
@@ -120,15 +118,21 @@ header .input-search{
     flex-direction: row;
     align-items: center;
     background: white;
-}
+  }
 
 .input-search .search{
-    padding: 10px;
+    padding-left: 10px;
+    gap: 10px;
+
+}
+.input-search .search input{
+    border: none; 
+    border-width: 0; 
+    box-shadow: none;
+    height: 30px;
+    outline: 0;
 }
 
-.input-search .search input{
-    border: none;
-}
 
 .input-search .button-A {
     /* min-width: 35px;
@@ -163,9 +167,10 @@ section{
   margin-top: 88px;
   margin-left: 312px;
   position: relative;
+  bottom: 0;
   background: white;
   border-top-left-radius: 25px;
-  z-index: -1;
+  z-index: -2;
 }
 
 section .main{
@@ -173,9 +178,9 @@ section .main{
     min-height: calc(100vh - 88px);
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 25px;
     padding: 32px 32px;
-    margin-right: 0;
 }
 
 section .main .main-heading{
@@ -228,14 +233,12 @@ section .main .main-heading .btn-add span{
 }
 
 section .main hr.solid {
-  border-top: 1px solid #bbb;
+  border: 1px solid #bbb;
 }
-
 
 section .main .summary{
     display: flex;
     flex-direction: column;
-    /* padding: 0px 32px; */
 } 
 
 section .main .summary .title{
@@ -269,7 +272,7 @@ section .main .employee-list table {
 
 section .main .employee-list table thead{
   min-height: 40px;
-  padding: 0px 12px;
+  padding: 11px 0px 11px 12px;
   color: #a1a0a3;
   background: #f5f5f5;
   text-align: left;
@@ -286,6 +289,7 @@ section .main .employee-list table thead th{
 
 section .main .employee-list table tbody{
   text-align: left;
+  color: #5F5F61;
 }
 
 section .main .employee-list table tbody td{
@@ -331,10 +335,11 @@ section .main .employee-list table tfoot th{
 }
 
 section .main .total{
+  min-height: 150px ;
   display: flex;
   flex-direction: column;
-  padding-top: 0px;
   align-items: flex-end;
+  font-style: normal;
 }
 
 section .main .total .amount{
