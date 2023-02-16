@@ -1,0 +1,32 @@
+/* Sidebar-menus */
+.menu{
+    color: rgb(85, 83, 83);
+  
+    &__heading {
+        font-size: 10px;
+        padding: 0px 0px 6px 12px;
+    }
+  
+    &__list {
+        list-style: none;
+    }
+  
+    &__link{
+        font-size: 14px;
+        color: rgb(85, 83, 83);
+        display: flex;
+        padding: 10px;
+        align-items: center;
+        text-decoration: none;
+        gap: 10px;
+    }
+  
+    &__link:hover{
+        background: #eee;
+    }
+  
+    &__link:hover span{
+        color: #105DFB;
+        transition: 0.5s;
+    }
+}

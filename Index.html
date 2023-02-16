@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css" type="text/css">
+    <link rel="stylesheet" href="/styles/main.css" type="text/css">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
 
@@ -18,240 +18,206 @@
 <body>
 
     <!-- sidebar -->
-    <aside>
-        <div class="sidebar-items">
-
-            <div class="logo">
+    <aside class="sidebar">
+        <div class="sidebar__content">
+            <div class="sidebar__logo">
                 <img src="/assets/logo.png" alt="Stratis Logo" > 
             </div>
-
-            <div class="sidebar-menu"> 
-                <div class="heading">
-                    <span> HEADING </span> 
-                </div>
-
-                <div class="menu-items">
-                    <a href="#">
-                        <img src="/assets/home-icon.png" alt="icons"> 
-                        <span class="nav-item">Home</span>
-                    </a>
-                </div>
-
-                <div class="menu-items">
-                    <a href="#">
-                        <img src="/assets/dashboard-icon.png" alt="icons" >
-                        <span class="nav-item">Dashboard</span>
-                    </a>
-                </div>
-
-                <div class="menu-items">
-                    <a href="#">
-                        <img src="/assets/user-icon.png" alt="icons">
-                        <span class="nav-item">Users</span>
-                    </a>
-                </div>
-
-                <div class="menu-items">
-                    <a href="#">
-                        <img src="/assets/project-icon.png" alt="icons">
-                        <span class="nav-item">Projects</span>
-                    </a>
-                </div>
-
-                <div class="menu-items">
-                    <a href="#">
-                        <img src="/assets/data-icon.png" alt="icons" >
-                        <span class="nav-item">Data</span>
-                    </a>
-                </div>
-            </div>
-    
-            <div class="footer-items">
-                <ul class="footer-list">
-
-                    <li class="list-items">
-                        <span class="heading"> PROJECTS </span> 
-                    </li>
-
-                    <li class="list-items">
-                        <a href=""> 
-                            <img src="/assets/dashboard-icon.png" alt="icons" class="footer-icon"> 
-                            <span class="nav-item"> Settings </span>
+            <div class="menu"> 
+               <h4 class="menu__heading"> HEADING </h4>
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a href="" class="menu__link">
+                            <img src="/assets/home-icon.png" alt="menu-icon"> 
+                            <span>Home</span>
                         </a>
                     </li>
-                    <li class="list-items"> 
-                        <a>
-                            <img src="/assets/help-icon.png" alt="icons" class="footer-icon"> 
-                            <span class="nav-item"> Help </span>
+                    <li class="menu__item">
+                        <a href="" class="menu__link">
+                            <img src="/assets/dashboard-icon.png" alt="menu-icon" >
+                            <span >Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link">
+                            <img src="/assets/user-icon.png" alt="menu-icon">
+                            <span >Users</span>
+                        </a>
+                   </li>
+                   <li class="menu__item">
+                    <a href="" class="menu__link">
+                            <img src="/assets/project-icon.png" alt="menu-icon">
+                            <span >Projects</span>
+                        </a>
+                   </li>
+                   <li class="menu__item">
+                    <a href="" class="menu__link">
+                            <img src="/assets/data-icon.png" alt="menu-icon" >
+                            <span>Data</span>
+                        </a>
+                   </li>
+                </ul>
+            </div>
+
+            <footer class="sidebar__footer menu">
+                <div class="menu">
+                <h4 class="menu__heading"> PROJECTS </h4>
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a href="" class="menu__link"> 
+                            <img src="/assets/dashboard-icon.png" alt="icons" class="menu-icon"> 
+                            <span> Settings </span>
+                        </a>
+                    </li>
+                    <li class="footer__list"> 
+                        <a href="" class="menu__link"> 
+                            <img src="/assets/help-icon.png" alt="icons" class="menu-icon"> 
+                            <span> Help </span>
                         </a>
                     </li>
                 </ul>
-            </div>
+                </div>
+            </footer>
         </div>
-      </aside>
+    </aside>
 
     <!--Header-->
 
-    <header>
-        <div class="header-content">
-
-        
-        <form class="input-search">
-           <div class="search">
-                <img src="/assets/search-icon.png" alt="icons">
-                <input type="text" placeholder="Search" >   
-           </div>
-           <div class="button-A">
-                <img src="/assets/A.png" alt="A">       
-            </div>
-        </form>
-
-        <div class="avatar-info">
-            <div class="avatar">
-                <img src="/assets/avatar.png" alt="icons">
-            </div>
-            <div class="user-info">
-                <span class="user-details"> Amanda Haydenson </span>
-                <span class="user-details"> amandahay@gmail.com </span>
-
+    <header class="header">
+        <div class="header__content">
+            <form class="search">
+                <div class="search__container">
+                        <img src="/assets/search-icon.png" alt="search-icon">
+                        <input type="text" placeholder="Search" >   
+                </div>
+                <button type="submit" class="btn btn--secondary">
+                    <img src="/assets/A.png" alt="A">       
+                </button>
+            </form>
+            <div class="user row">
+                <div class="user__avatar">
+                    <img src="/assets/avatar.png" alt="avatar-icon">
+                </div>
+                <div class="user__info">
+                    <h4 class="name"> Amanda Haydenson </h4>
+                    <span class="email"> amandahay@gmail.com </span>
+                </div>
             </div>
         </div>
-
-    </div>
-
-
     </header>
 
-    <section>
-       <div class="main">
+    <!-- Main Content -->
 
-            <div class="main-heading">
-
-                <div class="component-info">
-                    <div class="topic">
-                        <span> Payroll </span>
-                    </div>
-                    
-                    <div class="date">
-                        <span> July 01 - July 31 </span>
-                        <!-- <img src="/assets/info-icon.png" alt="icons"> -->
+    <main class="main">
+       <div class="main__content">
+            <div class="content">
+                <div class="content__heading">
+                    <h3 class="content__title" > Payroll </h3>                    
+                    <div class="content__date">
+                        <p> July 01 - July 31 </p>
+                        <img src="/assets/info-icon.png" alt="info-icon">
                     </div>
                 </div>
-
-                <button class="btn-add">
-                    <img src="/assets/add-icon.png" alt="icons">
-                    <span> Add candidate </span>
+                <button type="button" class="btn btn--add">
+                    <img src="/assets/add-icon.png" alt="add-icon">
+                    Add candidate  
                 </button>
             </div>
-
-            <hr class="solid">
-
-           
-            <div class="summary">
-                <span class="title">
-                    Summary for this month payroll
-                </span>
-                <span class="desc">
-                    See the total hours work and annual leave taken for each employee.
-                </span>
+            <div class="desc">
+                <h3 class="content__title"> Summary for this month payroll </h3>
+                <p> See the total hours work and annual leave taken for each employee.</p>
             </div>
-
-            <div class="employee-list">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>EMPLOYEE</th>
-                      <th>EMPLOYEE TYPE</th>
-                      <th>PAID DAYS</th>
-                      <th>TIME OFF </th>
-                      <th>NET PAY</th>
+            <table class="table">
+                <thead class="table__head">
+                    <tr class="table__row">
+                        <th>EMPLOYEE</th> 
+                        <th>EMPLOYEE TYPE</th>
+                        <th>PAID DAYS</th>
+                        <th>TIME OFF </th>
+                        <th>NET PAY</th>
                     </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                        <td class="emp-details"> 
-                            <div class="emp-name">
-                                <span> Steve Vaccaro</span>
-                            </div>
-                            <div class="emp-country">
-                                <img src="/assets//country-icon.png" alt="country">
+                </thead>
+                <tbody class="table__body">
+                    <tr class="table__row">
+                        <td class="table__data"> 
+                            <div class="table__column">
+                                <h4 class="table__name"> Steve Vaccaro </h4>
+                                <div class="table__details">
+                                    <img src="/assets//country-icon.png" alt="country-icon">
+                                    <span> Australia </span>
+                                </div>
                             </div>
                         </td>
-                        <td> Full-time Employee</td>
-                        <td> 22 days</td>
-                        <td> 0 days</td>
-                        <td class="net-pay"> $4345.00</td>
+                        <td class="table__data"> Full-time Employee</td>
+                        <td class="table__data"> 22 days</td>
+                        <td class="table__data"> 0 days</td>
+                        <td class="table__data table__data--amount "> $4345.00</td>
                     </tr>
                     <tr>
-                        <td class="emp-details"> 
-                            <div class="emp-name">
-                                <span> Tiana Kenter</span>
-                            </div>
-                            <div class="emp-country">
-                                <img src="/assets//country-icon.png" alt="country">
+                        <td class="table__data"> 
+                            <div class="table__column"> 
+                                <h4 class="table__name"> Tiana Kenter</h4>
+                                <div class="table__details">
+                                    <img src="/assets//country-icon.png" alt="country-icon">
+                                    <span> Australia </span>
+                                </div>
                             </div>
                         </td>
-                        <td> Full-time Employee</td>
-                        <td> 20 days</td>
-                        <td> 2 days</td>
-                        <td class="net-pay"> $3656.00</td>
+                        <td class="table__data"> Full-time Employee</td>
+                        <td class="table__data"> 20 days</td>
+                        <td class="table__data"> 2 days</td>
+                        <td class="table__data table__data--amount "> $3656.00</td>
                     </tr>
                     <tr>
-                        <td class="emp-details"> 
-                            <div class="emp-name">
-                                <span> Giana Troff</span>
-                            </div>
-                            <div class="emp-country">
-                                <img src="/assets//country-icon.png" alt="country">
+                        <td class="table__data">  
+                            <div class="table__column"> 
+                                <h4 class="table__name"> Giana Troff</h4>
+                                <div class="table__details">
+                                    <img src="/assets//country-icon.png" alt="country-icon">
+                                    <span> Australia </span>
+                                </div>
                             </div>
                         </td>
-                        <td> Contractor</td>
-                        <td> 20 days</td>
-                        <td> 0 days</td>
-                        <td class="net-pay"> $2125.00</td>
+                        <td class="table__data"> Contractor</td>
+                        <td class="table__data"> 20 days</td>
+                        <td class="table__data"> 0 days</td>
+                        <td class="table__data table__data--amount "> $2125.00</td>
                     </tr>
                     <tr>
-                        <td class="emp-details"> 
-                            <div class="emp-name">
-                                <span > Anika Levin</span>
-                            </div>
-                            <div class="emp-country">
-                                <img src="/assets//country-icon.png" alt="country">
+                        <td class="table__data"> 
+                            <div class="table__column"> 
+                                <h4 class="table__name"> Anika Levin </h4>
+                                <div class="table__details">
+                                    <img src="/assets//country-icon.png" alt="country-icon">
+                                    <span> Australia </span>
+                                </div>
                             </div>
                         </td>
-                        <td> Contractor</td>
-                        <td> 7 days</td>
-                        <td> 0 days</td>
-                        <td class="net-pay"> $3653.00</td>
+                        <td class="table__data"> Contractor</td>
+                        <td class="table__data"> 7 days</td>
+                        <td class="table__data"> 0 days</td>
+                        <td class="table__data table__data--amount "> $3653.00</td>
                     </tr>
-                  </tbody>
-                  <tfoot>
-                    <tr>
-                        <th>Total</th>
-                        <th> </th>
-                        <th>99 Days</th>
-                        <th>9 days</th>
-                        <th class="total-pay"> $16.567.00</th>
-                      </tr>
-                  </tfoot>
-                </table>
-              </div>
-              
-
-            <div class="total">
-                <span class="amount"> $16,567.00 </span>
-                <span> Total payroll </span>
+                </tbody>
+                <tfoot class="table__footer">
+                    <tr class="table__row ">
+                        <td class="table__data table__data--footer">Total</td>
+                        <td class="table__data table__data--footer"> </td>
+                        <td class="table__data table__data--footer">99 Days</td>
+                        <td class="table__data table__data--footer">9 days</td>
+                        <td class="table__data table__data--amount"> $16.567.00</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <div class="sum">
+                <h2 class="sum__heading" > $16,567.00 </h2>
+                <p> Total payroll </p>
             </div>
-
-            <div class="submit-payroll">
-                <button>
-                    Run Payroll
-                </button> 
-            </div>
+            <button type="submit" class="btn btn--primary">
+                Run payroll
+            </button> 
         </div>
-    </section>
-    
-    
+    </main>
 
 </body>
 </html>
