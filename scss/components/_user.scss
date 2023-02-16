@@ -1,0 +1,14 @@
+.user {
+  min-width: 200px;
+  min-height: 40px;
+  gap: 12px;
+  display: flex;
+  align-items: center;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

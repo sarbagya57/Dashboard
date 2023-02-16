@@ -1,0 +1,10 @@
+@mixin justifyItems() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin centerItems() {
+  display: flex;
+  align-items: center;
+}

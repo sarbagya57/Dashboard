@@ -1,0 +1,18 @@
+.search {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 12px;
+
+  &__container {
+    padding-left: 10px;
+    gap: 10px;
+  }
+
+  &__container input {
+    border: none;
+    border-width: 0;
+    box-shadow: none;
+    outline: 0;
+  }
+}
