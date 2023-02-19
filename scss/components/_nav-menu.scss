@@ -1,6 +1,6 @@
 /* Sidebar-menus */
 .menu {
-  color: $menu-text;
+  color: $grey-text;
 
   &__heading {
     font-size: 10px;
@@ -14,7 +14,7 @@
   &__link {
     @include centerItems();
     font-size: 14px;
-    color: $menu-text;
+    color: $grey-text;
     padding: 10px;
     text-decoration: none;
     gap: 10px;
@@ -25,7 +25,7 @@
   }
 
   &__link:hover span {
-    color: $hover-text;
+    color: $blue-text;
     transition: 0.5s;
   }
 }

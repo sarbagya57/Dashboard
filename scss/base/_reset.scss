@@ -5,10 +5,9 @@
 }
 
 body {
-  background: #f5f5f5;
-  font-family: "Inter", sans-serif;
-  font-style: normal;
+  background: $primary-color;
+  font-family: $inter-serif;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: $normal;
   line-height: 20px;
 }

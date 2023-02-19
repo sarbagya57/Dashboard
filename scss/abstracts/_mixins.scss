@@ -1,4 +1,4 @@
-@mixin justifyItems() {
+@mixin flexCenter() {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,4 +7,9 @@
 @mixin centerItems() {
   display: flex;
   align-items: center;
+}
+
+@mixin flexColumn() {
+  display: flex;
+  flex-direction: column;
 }

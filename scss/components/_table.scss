@@ -1,16 +1,15 @@
 .table {
-  font-size: 15px;
+  font-size: 14px;
   min-width: 100%;
   overflow: scroll;
-  background: #fff;
+  background: $light-color;
   border-spacing: 0;
 
   &__head {
-    color: #a1a0a3;
-    background: #f5f5f5;
-    font-weight: 600;
+    color: $light-grey;
+    background: $primary-color;
+    font-weight: $semiBold;
     font-size: 12px;
-    line-height: 18px;
   }
 
   &__row {
@@ -26,38 +25,41 @@
   }
 
   &__data {
-    border-bottom: 1px solid #f5f5f5;
+    border-bottom: 1px solid $primary-color;
+    padding-left: 8px;
+  }
 
-    &--amount {
-      padding: 0px;
-      text-align: right;
-    }
+  &__data-amount {
+    padding: 0px;
+    text-align: right;
+  }
 
-    &--footer {
-      padding: 12px 24px 12px 0px;
-      text-align: left;
-      font-weight: 600;
-      font-size: 14px;
-      line-height: 20px;
-      border-bottom: 1px solid #f5f5f5;
-    }
+  &__data-footer {
+    padding: 12px 24px 12px 8px;
+    text-align: left;
+    font-weight: $semiBold;
+    font-size: 14px;
+    border-bottom: 1px solid $primary-color;
   }
 
   &__column {
-    @include centerItems();
-    padding: 12px 24px 12px 8px;
+    align-items: flex-start;
+    padding: 12px 24px 12px 0px;
   }
 
   &__name {
     text-align: left;
-    font-weight: 600;
+    font-weight: $semiBold;
     padding-bottom: 4px;
   }
 
   &__details {
-    display: flex;
-    color: #5f5f61;
+    @include centerItems();
+    color: $grey-text;
     gap: 8px;
-    align-items: center;
   }
+}
+
+.bold {
+  font-weight: $semiBold;
 }

@@ -6,13 +6,12 @@
   left: 312px;
   top: 0;
   padding: 24px;
-  background: #f5f5f5;
+  background: $primary-color;
   z-index: 2;
 
   &__content {
-    display: flex;
-    gap: 33px;
-    align-items: center;
+    @include centerItems();
     justify-content: flex-end;
+    gap: 33px;
   }
 }
