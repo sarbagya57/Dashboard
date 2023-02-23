@@ -21,6 +21,7 @@ function validateForm() {
   const timeOff = document.getElementById("timeOff").value;
   const netPay = document.getElementById("netPay").value;
 
+  debugger;
   if (employeeName == "") {
     document.getElementById("validEmployeeName").innerHTML =
       "Please enter Employee Name";
@@ -36,6 +37,7 @@ function validateForm() {
       "Please enter Employee Type";
     return false;
   }
+  debugger;
   if (paidDays == "") {
     document.getElementById("validPaidDays").innerHTML =
       "Please enter Paid Days";
@@ -148,7 +150,6 @@ function addData() {
       closeForm();
       document.getElementById("Submit").style.display = "block";
       document.getElementById("Update").style.display = "none";
-      location.reload();
     } else {
       return false;
     }
@@ -189,17 +190,11 @@ function updateData(index) {
 
       localStorage.setItem("employeeList", JSON.stringify(employeeList));
       showData();
-      document.getElementById("employeeName").value = " ";
-      document.getElementById("country").value = " ";
-      document.getElementById("type").value = " ";
-      document.getElementById("paidDays").value = " ";
-      document.getElementById("timeOff").value = " ";
-      document.getElementById("netPay").value = " ";
+      clearField();
 
       closeForm();
       document.getElementById("Submit").style.display = "block";
       document.getElementById("Update").style.display = "none";
-      location.reload();
     } else {
       return false;
     }
@@ -276,10 +271,13 @@ function totalNetPay() {
 totalNetPay();
 
 function clearField() {
-  document.getElementById("employeeName").value = " ";
-  document.getElementById("country").value = " ";
-  document.getElementById("type").value = " ";
-  document.getElementById("paidDays").value = " ";
-  document.getElementById("timeOff").value = " ";
-  document.getElementById("netPay").value = " ";
+  document.getElementById("employeeName").value = null;
+  document.getElementById("country").value = null;
+  document.getElementById("type").value = null;
+  document.getElementById("paidDays").value = null;
+  document.getElementById("timeOff").value = null;
+  document.getElementById("netPay").value = null;
+  document.querySelectorAll("#popupForm .text-danger").forEach((node) => {
+    node.innerHTML = "";
+  });
 }

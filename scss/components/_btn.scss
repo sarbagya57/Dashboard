@@ -32,20 +32,28 @@
 }
 
 .btn-grp {
+  @include flexCenter;
   min-width: 130px;
   min-height: 30px;
   color: $light-color;
   border: 1px solid $cream;
-  background: $blue-text;
   border-radius: 7px;
   gap: 20px;
+  border: none;
 
   &__success {
+    cursor: pointer;
     background: $green;
   }
 
   &__danger {
+    cursor: pointer;
     background: $red;
+  }
+
+  &__update {
+    cursor: pointer;
+    background: $blue-text;
   }
 }
 
