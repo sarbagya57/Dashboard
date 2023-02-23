@@ -117,7 +117,7 @@
               <img src="/assets/info-icon.png" alt="info-icon" />
             </div>
           </div>
-          <button type="button" class="btn btn-add" onclick="openForm()">
+          <button type="button" class="btn btn-add" onclick="addData()">
             <img src="/assets/add-icon.png" alt="add-icon" />
             Add candidate
           </button>
@@ -147,6 +147,7 @@
               <td class="table__data final" id="footer-paid"></td>
               <td class="table__data final" id="footer-timeOff"></td>
               <td class="table__data final" id="footer-total"></td>
+              <td class="table__data final"></td>
             </tr>
           </tfoot>
         </table>
@@ -228,13 +229,23 @@
                 <button
                   type="button"
                   class="btn-grp btn-grp__success"
+                  id="Submit"
                   onclick="addData()"
                 >
                   Submit
                 </button>
                 <button
                   type="button"
+                  class="btn-grp btn-grp__update"
+                  id="Update"
+                  onclick="updateData()"
+                >
+                  Update
+                </button>
+                <button
+                  type="button"
                   class="btn-grp btn-grp__danger"
+                  id="Close"
                   onclick="closeForm()"
                 >
                   Close

@@ -2,8 +2,8 @@ const table = document.getElementById("employeeList");
 let employeeList;
 
 function openForm() {
-  document.getElementById("popupForm").style.display = "block";
   document.querySelector("body").style.overflow = "hidden";
+  document.getElementById("popupForm").style.display = "block";
 }
 function closeForm() {
   document.getElementById("popupForm").style.display = "none";
@@ -79,16 +79,18 @@ function showData() {
       <td class="table__data"> ${element.timeOff} Days </td>
       <td class="table__data">  ${element.netPay} </td>
       <td class="table__data"> 
-        <div class="button-group table-btn">
+        <div class="table-btn">
           <button onclick="updateData(` +
       index +
-      `)" class= "btn-form btn-form__success">
-            Update
+      `)" class= "btn">
+      <img src="/assets/edit-icon.png" alt="edit-icon" />
+
           </button>
           <button onclick="deleteData(` +
       index +
-      `)" class= "btn-form btn-form__danger">
-                  Delete
+      `)" class= "btn">
+      <img src="/assets/delete-icon.png" alt="del-icon" />
+
           </button> 
         </div>
       </td> 
@@ -105,44 +107,103 @@ document.onload = showData();
 // Function to add data in the table
 
 function addData() {
-  if (validateForm() == true) {
-    const employeeName = document.getElementById("employeeName").value;
-    const country = document.getElementById("country").value;
-    const type = document.getElementById("type").value;
-    const paidDays = document.getElementById("paidDays").value;
-    const timeOff = document.getElementById("timeOff").value;
-    const netPay = document.getElementById("netPay").value;
+  openForm();
+  document.getElementById("Submit").style.display = "block";
+  document.getElementById("Update").style.display = "none";
 
-    let employeeList;
-    if (localStorage.getItem("employeeList") == null) {
-      employeeList = [];
-    } else {
-      employeeList = JSON.parse(localStorage.getItem("employeeList"));
-    }
-
-    employeeList.push({
-      employeeName: employeeName,
-      country: country,
-      type: type,
-      paidDays: paidDays,
-      timeOff: timeOff,
-      netPay: netPay,
-    });
-
-    localStorage.setItem("employeeList", JSON.stringify(employeeList));
-    showData();
-    document.getElementById("employeeName").value = " ";
-    document.getElementById("country").value = " ";
-    document.getElementById("type").value = " ";
-    document.getElementById("paidDays").value = " ";
-    document.getElementById("timeOff").value = " ";
-    document.getElementById("netPay").value = " ";
-
-    closeForm();
-    location.reload();
+  let employeeList;
+  if (localStorage.getItem("employeeList") == null) {
+    employeeList = [];
   } else {
-    return false;
+    employeeList = JSON.parse(localStorage.getItem("employeeList"));
   }
+
+  document.querySelector("#Submit").onclick = function () {
+    if (validateForm()) {
+      const employeeName = document.getElementById("employeeName").value;
+      const country = document.getElementById("country").value;
+      const type = document.getElementById("type").value;
+      const paidDays = document.getElementById("paidDays").value;
+      const timeOff = document.getElementById("timeOff").value;
+      const netPay = document.getElementById("netPay").value;
+
+      employeeList.push({
+        employeeName: employeeName,
+        country: country,
+        type: type,
+        paidDays: paidDays,
+        timeOff: timeOff,
+        netPay: netPay,
+      });
+
+      localStorage.setItem("employeeList", JSON.stringify(employeeList));
+      showData();
+      document.getElementById("employeeName").value = " ";
+      document.getElementById("country").value = " ";
+      document.getElementById("type").value = " ";
+      document.getElementById("paidDays").value = " ";
+      document.getElementById("timeOff").value = " ";
+      document.getElementById("netPay").value = " ";
+
+      closeForm();
+      document.getElementById("Submit").style.display = "block";
+      document.getElementById("Update").style.display = "none";
+      location.reload();
+    } else {
+      return false;
+    }
+  };
+}
+
+// Function to update data from table
+
+function updateData(index) {
+  openForm();
+  document.getElementById("Submit").style.display = "none";
+  document.getElementById("Update").style.display = "block";
+
+  if (localStorage.getItem("employeeList") == null) {
+    employeeList = [];
+  } else {
+    employeeList = JSON.parse(localStorage.getItem("employeeList"));
+    showData();
+  }
+
+  document.getElementById("employeeName").value =
+    employeeList[index].employeeName;
+  document.getElementById("country").value = employeeList[index].country;
+  document.getElementById("type").value = employeeList[index].type;
+  document.getElementById("paidDays").value = employeeList[index].paidDays;
+  document.getElementById("timeOff").value = employeeList[index].timeOff;
+  document.getElementById("netPay").value = employeeList[index].netPay;
+
+  document.querySelector("#Update").onclick = function () {
+    if (validateForm()) {
+      employeeList[index].employeeName =
+        document.getElementById("employeeName").value;
+      employeeList[index].country = document.getElementById("country").value;
+      employeeList[index].type = document.getElementById("type").value;
+      employeeList[index].paidDays = document.getElementById("paidDays").value;
+      employeeList[index].timeOff = document.getElementById("timeOff").value;
+      employeeList[index].netPay = document.getElementById("netPay").value;
+
+      localStorage.setItem("employeeList", JSON.stringify(employeeList));
+      showData();
+      document.getElementById("employeeName").value = " ";
+      document.getElementById("country").value = " ";
+      document.getElementById("type").value = " ";
+      document.getElementById("paidDays").value = " ";
+      document.getElementById("timeOff").value = " ";
+      document.getElementById("netPay").value = " ";
+
+      closeForm();
+      document.getElementById("Submit").style.display = "block";
+      document.getElementById("Update").style.display = "none";
+      location.reload();
+    } else {
+      return false;
+    }
+  };
 }
 
 // Function to delete data from table
@@ -201,6 +262,7 @@ totalTimeOff();
 
 function totalNetPay() {
   const employees = JSON.parse(localStorage.getItem("employeeList"));
+  console.log(employees);
   let net = employees.map((employe) => employe.netPay);
   net = net.map(Number);
   const totalNet = net.reduce(function (n, index) {
