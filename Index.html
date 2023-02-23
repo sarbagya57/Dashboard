@@ -1,22 +1,10 @@
 <!DOCTYPE html>
-
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles/main.css" type="text/css" />
-    <link
-      rel="stylesheet"
-      href="path/to/font-awesome/css/font-awesome.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
-      integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7"
-      crossorigin="anonymous"
-    />
-
     <title>Dashboard</title>
     <link rel="icon" type="image/x-icon" href="/assets/logo-mark.png" />
   </head>
@@ -62,7 +50,6 @@
             </li>
           </ul>
         </div>
-
         <footer class="sidebar__footer menu">
           <div class="menu">
             <h4 class="menu__heading">PROJECTS</h4>
@@ -106,7 +93,7 @@
             <img src="/assets/A.png" alt="A" />
           </button>
         </form>
-        <div class="user row">
+        <div class="user">
           <div class="user__avatar">
             <img src="/assets/avatar.png" alt="avatar-icon" />
           </div>
@@ -122,26 +109,26 @@
 
     <main class="main">
       <div class="main__content">
-        <div class="content">
-          <div class="content__heading">
+        <div class="main__header">
+          <div class="content">
             <h3 class="content__title">Payroll</h3>
             <div class="content__date">
               <p>July 01 - July 31</p>
               <img src="/assets/info-icon.png" alt="info-icon" />
             </div>
           </div>
-          <button type="button" class="btn btn-add">
+          <button type="button" class="btn btn-add" onclick="openForm()">
             <img src="/assets/add-icon.png" alt="add-icon" />
             Add candidate
           </button>
         </div>
-        <div class="desc">
-          <h3 class="desc__title">Summary for this month payroll</h3>
-          <p class="desc__text">
+        <div class="main__desc">
+          <h3 class="main__desc--title">Summary for this month payroll</h3>
+          <p class="main__desc--text">
             See the total hours work and annual leave taken for each employee.
           </p>
         </div>
-        <table class="table">
+        <table class="table" id="employeeList">
           <thead class="table__head">
             <tr class="table__row">
               <th>EMPLOYEE</th>
@@ -149,86 +136,115 @@
               <th>PAID DAYS</th>
               <th>TIME OFF</th>
               <th>NET PAY</th>
+              <th class="text-center">ACTIONS</th>
             </tr>
           </thead>
-          <tbody class="table__body">
+          <tbody class="table__body"></tbody>
+          <tfoot>
             <tr class="table__row">
-              <td class="table__data">
-                <div class="table__column">
-                  <h4 class="table__name">Steve Vaccaro</h4>
-                  <div class="table__details">
-                    <img src="/assets//country-icon.png" alt="country-icon" />
-                    <span> Australia </span>
-                  </div>
-                </div>
-              </td>
-              <td class="table__data">Full-time Employee</td>
-              <td class="table__data">22 days</td>
-              <td class="table__data">0 days</td>
-              <td class="table__data-amount">$4345.00</td>
-            </tr>
-            <tr>
-              <td class="table__data">
-                <div class="table__column">
-                  <h4 class="table__name">Tiana Kenter</h4>
-                  <div class="table__details">
-                    <img src="/assets//country-icon.png" alt="country-icon" />
-                    <span> Australia </span>
-                  </div>
-                </div>
-              </td>
-              <td class="table__data">Full-time Employee</td>
-              <td class="table__data">20 days</td>
-              <td class="table__data">2 days</td>
-              <td class="table__data-amount">$3656.00</td>
-            </tr>
-            <tr>
-              <td class="table__data">
-                <div class="table__column">
-                  <h4 class="table__name">Giana Troff</h4>
-                  <div class="table__details">
-                    <img src="/assets//country-icon.png" alt="country-icon" />
-                    <span> Australia </span>
-                  </div>
-                </div>
-              </td>
-              <td class="table__data">Contractor</td>
-              <td class="table__data">20 days</td>
-              <td class="table__data">0 days</td>
-              <td class="table__data-amount">$2125.00</td>
-            </tr>
-            <tr>
-              <td class="table__data">
-                <div class="table__column">
-                  <h4 class="table__name">Anika Levin</h4>
-                  <div class="table__details">
-                    <img src="/assets//country-icon.png" alt="country-icon" />
-                    <span> Australia </span>
-                  </div>
-                </div>
-              </td>
-              <td class="table__data">Contractor</td>
-              <td class="table__data">7 days</td>
-              <td class="table__data">0 days</td>
-              <td class="table__data-amount">$3653.00</td>
-            </tr>
-          </tbody>
-          <tfoot class="table__footer">
-            <tr class="table__row">
-              <td class="table__data-footer">Total</td>
-              <td class="table__data-footer"></td>
-              <td class="table__data-footer">99 Days</td>
-              <td class="table__data-footer">9 days</td>
-              <td class="table__data-amount bold">$16.567.00</td>
+              <td class="table__data final">Total</td>
+              <td class="table__data final"></td>
+              <td class="table__data final" id="footer-paid"></td>
+              <td class="table__data final" id="footer-timeOff"></td>
+              <td class="table__data final" id="footer-total"></td>
             </tr>
           </tfoot>
         </table>
-        <div class="sum">
-          <h2 class="sum__heading">$16,567.00</h2>
+
+        <div class="main__footer text-right">
+          <h2 class="main__footer--text" id="total"></h2>
           <p>Total payroll</p>
         </div>
+
         <button type="submit" class="btn btn-primary">Run payroll</button>
+
+        <!-- Add form -->
+
+        <div class="main__popup" id="popupForm">
+          <div class="main__popup-wrapper">
+            <form class="form">
+              <h2 class="form__text">ADD NEW EMPLOYEE</h2>
+              <div class="input-group">
+                <label class="input-group__label">Employee Name: </label>
+                <input
+                  type="text"
+                  name="employeeName"
+                  id="employeeName"
+                  class="input-group__input"
+                />
+                <span id="validEmployeeName" class="text-danger"> </span>
+              </div>
+              <div class="input-group">
+                <label class="input-group__label">Country:</label>
+                <input
+                  type="text"
+                  name="country"
+                  id="country"
+                  class="input-group__input"
+                />
+                <span id="validCountry" class="text-danger"> </span>
+              </div>
+              <div class="input-group">
+                <label class="input-group__label">Employee Type:</label>
+                <input
+                  type="text"
+                  name="type"
+                  id="type"
+                  class="input-group__input"
+                />
+                <span id="validType" class="text-danger"> </span>
+              </div>
+              <div class="input-group">
+                <label class="input-group__label">Paid Days:</label>
+                <input
+                  type="number"
+                  name="paidDays"
+                  id="paidDays"
+                  class="input-group__input"
+                />
+                <span id="validPaidDays" class="text-danger"> </span>
+              </div>
+              <div class="input-group">
+                <label class="input-group__label">Time Off:</label>
+                <input
+                  type="number"
+                  name="timeOff"
+                  id="timeOff"
+                  class="input-group__input"
+                />
+                <span id="validTimeOff" class="text-danger"> </span>
+              </div>
+              <div class="input-group">
+                <label class="input-group__label">Net Pay:</label>
+                <input
+                  type="number"
+                  name="netPay"
+                  id="netPay"
+                  class="input-group__input"
+                />
+                <span id="validNetPay" class="text-danger"> </span>
+              </div>
+              <div class="button-group">
+                <button
+                  type="button"
+                  class="btn-grp btn-grp__success"
+                  onclick="addData()"
+                >
+                  Submit
+                </button>
+                <button
+                  type="button"
+                  class="btn-grp btn-grp__danger"
+                  onclick="closeForm()"
+                >
+                  Close
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </main>
+    <script type="text/javascript" src="index.js"></script>
   </body>
 </html>

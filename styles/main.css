@@ -12,6 +12,24 @@ body {
   line-height: 20px;
 }
 
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.final {
+  font-weight: 600;
+  color: black;
+  padding: 12px 0px 12px 8px;
+}
+
+.text-danger {
+  color: #dc3545;
+}
+
 .btn {
   display: flex;
   justify-content: center;
@@ -43,6 +61,29 @@ body {
   background: #105dfb;
   color: #fff;
   align-self: flex-end;
+}
+
+.btn-grp {
+  min-width: 130px;
+  min-height: 30px;
+  color: #fff;
+  border: 1px solid #e6e6e6;
+  background: #105dfb;
+  border-radius: 7px;
+  gap: 20px;
+}
+.btn-grp__success {
+  background: #28a745;
+}
+.btn-grp__danger {
+  background: #dc3545;
+}
+
+.table-btn {
+  justify-content: flex-start;
+  width: 150px;
+  display: flex;
+  justify-content: center;
 }
 
 /* Sidebar-menus */
@@ -106,6 +147,25 @@ body {
   line-height: 20px;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.content__title {
+  font-weight: 600;
+  font-size: 24px;
+}
+.content__date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-weight: 400;
+  color: #5f5f61;
+  font-size: 14px;
+}
+
 .table {
   font-size: 14px;
   min-width: 100%;
@@ -131,17 +191,7 @@ body {
 .table__data {
   border-bottom: 1px solid #f5f5f5;
   padding-left: 8px;
-}
-.table__data-amount {
-  padding: 0px;
-  text-align: right;
-}
-.table__data-footer {
-  padding: 12px 24px 12px 8px;
-  text-align: left;
-  font-weight: 600;
-  font-size: 14px;
-  border-bottom: 1px solid #f5f5f5;
+  cursor: pointer;
 }
 .table__column {
   align-items: flex-start;
@@ -159,8 +209,46 @@ body {
   gap: 8px;
 }
 
-.bold {
-  font-weight: 600;
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form__text {
+  text-align: center;
+  padding: 15px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+.input-group__input[type=text], .input-group__input[type=number] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 7px;
+  background: #f5f5f5;
+}
+.input-group__label {
+  font-size: 14px;
+  font-weight: 400;
+}
+.input-group span {
+  padding-top: 5px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 /* Header CSS */
@@ -197,64 +285,61 @@ body {
   border-top-left-radius: 25px;
   padding: 32px;
 }
-
-.content {
+.main__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #e6e6e6;
-  padding-bottom: 25px;
+  padding-bottom: 20px;
 }
-.content__heading {
+.main__desc {
   display: flex;
   flex-direction: column;
-  gap: 9px;
-}
-.content__title {
-  font-weight: 600;
-  font-size: 24px;
-}
-.content__date {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  font-weight: 400;
+  font-size: 14px;
   color: #5f5f61;
-  font-size: 14px;
-}
-
-.desc {
-  display: flex;
-  flex-direction: column;
-  font-size: 14px;
   gap: 8px;
+  font-weight: 400;
 }
-.desc__title {
+.main__desc--title {
   font-weight: 600;
   font-size: 18px;
+  color: #333;
 }
-.desc__text {
-  color: #5f5f61;
+.main__popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 100;
+  overflow-y: scroll;
 }
-
-.sum {
-  min-height: 150px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 8px;
+.main__popup-wrapper {
+  min-width: 30%;
+  min-height: 50vh;
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  transform: translate(-50%, 5%);
+  border: 3px solid #fff;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid black;
+}
+.main__footer {
+  padding-top: 20px;
   font-size: 18px;
   font-weight: normal;
+  padding-bottom: 20px;
 }
-.sum__heading {
+.main__footer--text {
   font-weight: 600;
-  font-size: 32px;
+  font-size: 40px;
+  padding-bottom: 8px;
   line-height: 40px;
-}
-
-.row {
-  display: flex;
 }
 
 .sidebar {
@@ -265,6 +350,8 @@ body {
   background: #f5f5f5;
 }
 .sidebar__content {
+  position: absolute;
+  min-width: 312px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

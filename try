@@ -1,0 +1,157 @@
+<!-- <tbody class="table__body">
+            <tr class="table__row">
+              <td class="table__data">
+                <div class="table__column">
+                  <h4 class="table__name">Steve Vaccaro</h4>
+                  <div class="table__details">
+                    <img src="/assets//country-icon.png" alt="country-icon" />
+                    <span> Australia </span>
+                  </div>
+                </div>
+              </td>
+              <td class="table__data">Full-time Employee</td>
+              <td class="table__data">22 days</td>
+              <td class="table__data">0 days</td>
+              <td class="table__data amount">$4345.00</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__data">
+                <div class="table__column">
+                  <h4 class="table__name">Tiana Kenter</h4>
+                  <div class="table__details">
+                    <img src="/assets//country-icon.png" alt="country-icon" />
+                    <span> Australia </span>
+                  </div>
+                </div>
+              </td>
+              <td class="table__data">Full-time Employee</td>
+              <td class="table__data">20 days</td>
+              <td class="table__data">2 days</td>
+              <td class="table__data amount">$3656.00</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__data">
+                <div class="table__column">
+                  <h4 class="table__name">Giana Troff</h4>
+                  <div class="table__details">
+                    <img src="/assets//country-icon.png" alt="country-icon" />
+                    <span> Australia </span>
+                  </div>
+                </div>
+              </td>
+              <td class="table__data">Contractor</td>
+              <td class="table__data">20 days</td>
+              <td class="table__data">0 days</td>
+              <td class="table__data amount">$2125.00</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__data">
+                <div class="table__column">
+                  <h4 class="table__name">Anika Levin</h4>
+                  <div class="table__details">
+                    <img src="/assets//country-icon.png" alt="country-icon" />
+                    <span> Australia </span>
+                  </div>
+                </div>
+              </td>
+              <td class="table__data">Contractor</td>
+              <td class="table__data">7 days</td>
+              <td class="table__data">0 days</td>
+              <td class="table__data amount">$3653.00</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__data bold">Total</td>
+              <td class="table__data bold"></td>
+              <td class="table__data bold">99 Days</td>
+              <td class="table__data bold">9 days</td>
+              <td class="table__data amount bold">$16.567.00</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td class="table__footer right" colspan="5">
+                <h2 class="table__footer--text">$16,567.00</h2>
+                <p>Total payroll</p>
+              </td>
+            </tr>
+          </tfoot> -->
+
+//for country flag // var countrycodedict = { // "United States": "us", // }; //
+function getCountryCode(countryName) { // return ( //
+"https://lipis.github.io/flag-icon-css/flags/4x3/" + //
+countrycodedict[countryName] + // ".svg" // ); // } //
+document.getElementById("demo").src = getCountryCode(cName);
+
+<!-- if (employeeName == "") {
+  document.getElementById("validEN").innerHTML = "Please enter Employee Name";
+  return false;
+}
+// if (country == "") {
+//   alert("Country name is required");
+//   return false;
+// }
+// if (type == "") {
+//   alert("Employee type is required");
+//   return false;
+// }
+// if (paidDays == "") {
+//   alert("Paid Days is required");
+//   return false;
+// }
+// if (timeOff == "") {
+//   alert("Time off is required");
+//   return false;
+// }
+// if (netPay == "") {
+//   alert("Net-Pay is required");
+//   return false;
+// }-->
+
+<!-- 
+  // html += "<td class=table__data>" + element.type + "</td>";
+    // html += "<td class=table__data>" + element.paidDays + " Days </td>";
+    // html += "<td class=table__data>" + element.timeOff + " Days </td>";
+    // html += "<td class=table__data text-end>" + element.netPay + "</td>";
+
+-->
+
+<!-- // Function for calculating total paid days
+
+// function totalPay() {
+//   let sumVal = 0;
+//   for (let i = 1; i < table.rows.length - 1; i++) {
+//     sumVal = sumVal + parseFloat(table.rows[i].cells[2].innerHTML);
+//     console.log(i);
+//   }
+//   document.getElementById("footer-paid").innerHTML = sumVal + " Days";
+//   console.log(sumVal);
+// }
+
+// totalPay();
+
+// // Function for calculating total time off
+// function totalTimeOff() {
+//   let sumVal = 0;
+//   for (var i = 1; i < table.rows.length - 1; i++) {
+//     sumVal = sumVal + parseFloat(table.rows[i].cells[3].innerHTML);
+//     console.log(i);
+//   }
+//   document.getElementById("footer-timeOff").innerHTML = sumVal + " Days";
+//   console.log(sumVal);
+// }
+
+// totalTimeOff();
+
+// Function for calculating total net pay
+// function totalNetPay() {
+//   let sumVal = 0;
+//   for (let i = 1; i < table.rows.length - 1; i++) {
+//     sumVal = sumVal + parseFloat(table.rows[i].cells[4].innerHTML);
+//     console.log(i);
+//   }
+//   document.getElementById("total").innerHTML = "$" + sumVal;
+//   document.getElementById("footer-total").innerHTML = "$ " + sumVal;
+//   console.log(sumVal);
+// }
+
+// totalNetPay();-->

@@ -30,3 +30,28 @@
   color: $light-color;
   align-self: flex-end;
 }
+
+.btn-grp {
+  min-width: 130px;
+  min-height: 30px;
+  color: $light-color;
+  border: 1px solid $cream;
+  background: $blue-text;
+  border-radius: 7px;
+  gap: 20px;
+
+  &__success {
+    background: $green;
+  }
+
+  &__danger {
+    background: $red;
+  }
+}
+
+.table-btn {
+  justify-content: flex-start;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+}

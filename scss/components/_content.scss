@@ -1,0 +1,19 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+
+  &__title {
+    // map-get($web-color, "red");
+    font-weight: $semiBold;
+    font-size: 24px;
+  }
+
+  &__date {
+    @include flexCenter();
+    gap: 10px;
+    font-weight: $normal;
+    color: $dark-grey;
+    font-size: 14px;
+  }
+}

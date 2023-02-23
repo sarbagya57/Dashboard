@@ -27,19 +27,7 @@
   &__data {
     border-bottom: 1px solid $primary-color;
     padding-left: 8px;
-  }
-
-  &__data-amount {
-    padding: 0px;
-    text-align: right;
-  }
-
-  &__data-footer {
-    padding: 12px 24px 12px 8px;
-    text-align: left;
-    font-weight: $semiBold;
-    font-size: 14px;
-    border-bottom: 1px solid $primary-color;
+    cursor: pointer;
   }
 
   &__column {
@@ -58,8 +46,4 @@
     color: $grey-text;
     gap: 8px;
   }
-}
-
-.bold {
-  font-weight: $semiBold;
 }
